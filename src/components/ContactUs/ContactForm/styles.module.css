@@ -1,0 +1,156 @@
+.card {
+  border-radius: 16px;
+  padding: 2rem;
+  height: 100%;
+  border: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+[data-bs-theme="dark"] .card {
+  background-color: #1f303c;
+  border-color: #2a3d49;
+}
+.card .formControl:focus {
+  border-color: var(--orangeColor);
+  box-shadow: 0 0 0 3px rgba(247, 151, 29, 0.25);
+  outline: none;
+}
+[data-bs-theme="dark"] .card .formControl {
+  background-color: #16232c;
+  color: #cfd8dc;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+[data-bs-theme="dark"] .card .formControl:focus {
+  background-color: #16232c;
+  color: #cfd8dc;
+  border-color: var(--orangeColor);
+  box-shadow: 0 0 0 3px rgba(247, 151, 29, 0.25);
+}
+[data-bs-theme="light"] .card {
+  background-color: #ffffff;
+  border-color: #eaeaea;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+.formLabel {
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+}
+
+.formControl {
+  border-radius: 10px;
+  padding: 0.65rem 0.9rem;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* ---------- الحقل الخاطئ ---------- */
+[data-bs-theme] .card .formControl.invalid {
+  border-color: #ff6b6b;
+}
+
+[data-bs-theme] .card .formControl.invalid:focus {
+  border-color: #ff6b6b;
+  box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.2);
+}
+
+/* ---------- بوب الشكر ---------- */
+.thanksContent {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid rgba(247, 151, 29, 0.3);
+}
+
+.thanksContent::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  border-top: 1.5px solid rgba(247, 151, 29, 0.6);
+  border-right: 1.5px solid rgba(247, 151, 29, 0.6);
+  border-top-right-radius: 16px;
+}
+
+[data-bs-theme="dark"] .thanksContent {
+  background: #1f303c;
+}
+
+[data-bs-theme="light"] .thanksContent {
+  background: #ffffff;
+}
+
+.thanksBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1.5rem 1.5rem;
+}
+
+.thanksIconRing {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 1.1rem;
+  border-radius: 50%;
+  background: rgba(247, 151, 29, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thanksIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--orangeColor);
+  color: #16232c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thanksTitle {
+  margin: 0 0 0.4rem;
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.thanksText {
+  margin: 0 0 1.4rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+[data-bs-theme="dark"] .thanksTitle {
+  color: #ffffff;
+}
+
+[data-bs-theme="dark"] .thanksText {
+  color: #9fb0ba;
+}
+
+[data-bs-theme="light"] .thanksTitle {
+  color: #16232c;
+}
+
+[data-bs-theme="light"] .thanksText {
+  color: #6b7280;
+}
+
+.thanksClose {
+  margin-top: 0.9rem;
+  border: 0;
+  background: transparent;
+  font-size: 0.85rem;
+  color: #7d8b94;
+  cursor: pointer;
+}
+
+.thanksClose:hover {
+  color: var(--orangeColor);
+}

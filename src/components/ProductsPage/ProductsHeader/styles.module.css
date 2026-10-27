@@ -1,0 +1,56 @@
+.header {
+  padding: 3rem 2rem 4rem;
+}
+
+.breadcrumb {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+.breadcrumb a:hover {
+  color: var(--orangeColor);
+  transform: translateY(-2.5px);
+  display: inline-block;
+  text-shadow: 3px 3px 20px var(--orangeColor);
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.title {
+  margin: 0 0 4px;
+}
+
+.count {
+  font-size: 0.85rem;
+  margin: 0;
+  color: var(--orangeColor);
+}
+.sizeFilter {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.sizeButton {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: transparent;
+  cursor: pointer;
+  color: inherit;
+  transition: all 0.2s ease;
+}
+
+.sizeButtonActive {
+  background: var(--orangeColor);
+  border-color: var(--orangeColor);
+  color: white;
+  box-shadow: 3px 3px 20px var(--orangeColor);
+  transform: translateY(-2.5px);
+}
+.sizeButton:hover {
+  box-shadow: 3px 3px 20px var(--orangeColor);
+  transform: translateY(-2.5px);
+}

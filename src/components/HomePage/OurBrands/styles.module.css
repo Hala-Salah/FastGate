@@ -1,0 +1,88 @@
+.brandsSection {
+  transition: background 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  scroll-margin-top: 90px;
+}
+
+[data-bs-theme="light"] .brandsSection {
+  background: #ffffff;
+}
+
+/* توهج خلفية خفيف، موجود بالوضعين */
+.brandsSection::before {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  filter: blur(90px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+[data-bs-theme="dark"] .brandsSection::before {
+  background: radial-gradient(
+    circle,
+    rgba(247, 151, 29, 0.12),
+    transparent 70%
+  );
+}
+
+[data-bs-theme="light"] .brandsSection::before {
+  background: radial-gradient(
+    circle,
+    rgba(247, 151, 29, 0.15),
+    transparent 70%
+  );
+}
+
+[data-bs-theme="dark"] .card {
+  background: #1f303c;
+}
+
+[data-bs-theme="light"] .card {
+  background: #fafafa;
+}
+
+.logo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: grayscale(1) opacity(0.75);
+  transition: filter 0.25s ease;
+}
+
+.card:hover .logo {
+  filter: grayscale(0) opacity(1);
+}
+
+.brandName {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0;
+  text-align: center;
+  transition: color 0.4s ease;
+  position: relative;
+  z-index: 1;
+}
+
+[data-bs-theme="dark"] .brandName {
+  color: #cfd8dc;
+}
+
+[data-bs-theme="light"] .brandName {
+  color: #45525b;
+}
+
+@media (max-width: 480px) {
+  .brandsSection {
+    padding: 3.5rem 1.2rem;
+  }
+  .logoWrapper {
+    height: 60px;
+  }
+}

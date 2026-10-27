@@ -1,0 +1,15 @@
+/* --- ألوان الوضع النهاري (Light) --- */
+[data-bs-theme="light"] {
+  --my-bg-color: #f8f9fa; /* لون الخلفية الذي تحبينه */
+  --my-text-color: #17242d; /* لون النص */
+  --my-navbar-bg: white; /* لون الناف بار */
+  --my-accent-color: #f7971d; /* لون التمييز (الروابط مثلاً) */
+}
+
+/* --- ألوان الوضع الليلي (Dark) --- */
+[data-bs-theme="dark"] {
+  --my-bg-color: #17242d !important; /* لون الخلفية الغامق */
+  --my-text-color: #e0e0e0; /* لون النص الفاتح */
+  --my-navbar-bg: #17242d; /* لون الناف بار الغامق */
+  --my-accent-color: #f7971d; /* لون التمييز في الوضع الليلي */
+}

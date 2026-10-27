@@ -1,0 +1,38 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding-top: 2rem;
+  color: #fff;
+}
+
+.title {
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto;
+  font-weight: 700;
+  text-align: left;
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: clamp(1.25rem, 3vw, 2rem);
+  font-weight: 500;
+  color: #16232c;
+  text-align: left;
+}
+
+.word {
+  display: block;
+  color: var(--orangeColor);
+  font-size: clamp(3rem, 10vw, 12rem);
+  line-height: 0.8;
+  letter-spacing: -0.03em;
+  text-align: center;
+}
+
+[data-bs-theme="dark"] .eyebrow {
+  color: #fff;
+}

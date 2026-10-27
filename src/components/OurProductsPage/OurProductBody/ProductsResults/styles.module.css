@@ -1,0 +1,55 @@
+.topBar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.count {
+  margin: 0;
+  white-space: nowrap;
+  opacity: 0.7;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.5rem 0.35rem 0.9rem;
+  border-radius: 999px;
+  background: #fdebd0;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.chip button {
+  display: grid;
+  place-items: center;
+  width: 1.25rem;
+  height: 1.25rem;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #16232c;
+  color: #fff;
+  font-size: 0.8rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+[data-bs-theme="dark"] .chip {
+  background: rgba(247, 151, 29, 0.2);
+}
+
+[data-bs-theme="dark"] .chip button {
+  background: #fff;
+  color: #16232c;
+}

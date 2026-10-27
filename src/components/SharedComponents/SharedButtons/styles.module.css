@@ -1,0 +1,35 @@
+/* الستايل المشترك بين كل الأزرار */
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  border: 2px solid var(--orangeColor);
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+/* البرايمري */
+.primarybutton {
+  color: #ffffff;
+  background-color: var(--orangeColor);
+}
+
+.primarybutton:hover {
+  transform: translateY(-2.5px);
+  box-shadow: 3px 3px 20px var(--orangeColor);
+}
+
+/* السكندري */
+.secondarybutton {
+  color: var(--orangeColor);
+  background-color: transparent;
+}
+
+.secondarybutton:hover {
+  color: #ffffff;
+  background-color: var(--orangeColor);
+}

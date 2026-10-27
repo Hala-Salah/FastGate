@@ -1,0 +1,33 @@
+.returnBtn {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000; /* فوق طبقات Leaflet */
+  padding: 12px 28px;
+  border-radius: 30px;
+  background: #f7971d;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border: 2px solid var(--orangeColor);
+  text-decoration: none;
+  color: white;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.28);
+  animation: returnBtnIn 0.25s ease;
+}
+
+.returnBtn:hover {
+  box-shadow: 3px 3px 20px var(--orangeColor);
+}
+
+@keyframes returnBtnIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 10px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}

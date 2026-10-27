@@ -1,0 +1,118 @@
+.wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.pillBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+/* ===== الدارك ===== */
+[data-bs-theme="dark"] .pillBtn {
+  background: rgba(247, 151, 29, 0.12);
+  border: 1.5px solid rgba(247, 151, 29, 0.5);
+  color: #ffffff;
+}
+
+[data-bs-theme="dark"] .pillBtn:hover {
+  background: rgba(247, 151, 29, 0.2);
+}
+
+/* ===== اللايت ===== */
+[data-bs-theme="light"] .pillBtn {
+  background: rgba(247, 151, 29, 0.08);
+  border: 1.5px solid rgba(247, 151, 29, 0.4);
+  color: #16232c;
+}
+
+[data-bs-theme="light"] .pillBtn:hover {
+  background: rgba(247, 151, 29, 0.1);
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  color: #f7971d;
+  flex-shrink: 0;
+}
+
+.code {
+  letter-spacing: 0.5px;
+}
+
+.chevron {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 130px;
+  border-radius: 12px;
+  padding: 6px;
+  list-style: none;
+  z-index: 50;
+}
+
+[data-bs-theme="dark"] .dropdown {
+  background: #1f303c;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+[data-bs-theme="light"] .dropdown {
+  background: #ffffff;
+  border: 1px solid rgba(22, 35, 44, 0.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown li button {
+  width: 100%;
+  text-align: start;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.2s ease;
+}
+
+[data-bs-theme="dark"] .dropdown li button {
+  color: #ffffff;
+}
+
+[data-bs-theme="light"] .dropdown li button {
+  color: #16232c;
+}
+
+[data-bs-theme="dark"] .dropdown li button:hover {
+  background: rgba(247, 151, 29, 0.15);
+}
+
+[data-bs-theme="light"] .dropdown li button:hover {
+  background: rgba(247, 151, 29, 0.1);
+}
+
+.active {
+  color: #f7971d !important;
+  font-weight: 700;
+}

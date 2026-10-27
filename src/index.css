@@ -1,0 +1,19 @@
+:root {
+  --orangeColor: #f7971d;
+  --darkBlue: #16232c;
+  --page-max: 1200px;
+  --page-gutter: 24px;
+}
+body {
+  font-family: "Space Grotesk", sans-serif !important;
+}
+[data-bs-theme="dark"] body {
+  background: var(--darkBlue);
+}
+
+.page-container {
+  width: 100%;
+  max-width: var(--page-max);
+  margin-inline: auto;
+  padding-inline: var(--page-gutter);
+}

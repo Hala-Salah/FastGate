@@ -1,0 +1,155 @@
+.footer {
+  position: relative;
+  padding-top: 3.5rem;
+  transition: background 0.4s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  background: #16232c;
+  background: linear-gradient(
+    112deg,
+    rgba(22, 35, 44, 1) 0%,
+    rgba(43, 71, 94, 1) 46%,
+    rgba(37, 53, 66, 1) 100%
+  );
+}
+.contactIcon {
+  width: 18px;
+  height: 18px;
+  color: #f7971d;
+  flex-shrink: 0;
+}
+
+/* خط زخرفي أعلى الفوتر */
+.topLine {
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(90deg, transparent, #f7971d, transparent);
+}
+
+.container {
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 2.5rem;
+  max-width: 1400px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.logo {
+  height: 70px;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.tagline {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #9aa7b0;
+  margin-bottom: 1.5rem;
+  max-width: 320px;
+}
+
+.socials {
+  display: flex;
+  gap: 0.7rem;
+}
+
+.socialIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(247, 151, 29, 0.3);
+  color: #f7971d;
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.socialIcon:hover {
+  background: rgba(247, 151, 29, 0.15);
+  transform: translateY(-3px);
+}
+
+.heading {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1.2rem;
+}
+
+.linkList,
+.contactList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.linkList a {
+  color: #9aa7b0;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.linkList a:hover {
+  color: #f7971d;
+}
+
+.contactList li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  color: #9aa7b0;
+}
+
+.contactIcon {
+  color: #f7971d;
+  flex-shrink: 0;
+}
+
+.bottomBar {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 1.2rem 1.5rem;
+  text-align: center;
+}
+
+.bottomBar p {
+  margin: 0;
+  font-size: 0.82rem;
+  color: #7a8891;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .tagline {
+    max-width: none;
+  }
+
+  .socials {
+    justify-content: center;
+  }
+
+  .contactList li {
+    justify-content: center;
+  }
+}

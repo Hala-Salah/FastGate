@@ -1,0 +1,111 @@
+.NavItems {
+  font-size: large;
+}
+
+.NavItems:hover {
+  color: #f7971d;
+  transform: translateY(-2.5px);
+  text-shadow: 3px 3px 20px #f7971d;
+}
+
+/* تابلت */
+@media (max-width: 992px) {
+  .NavItems {
+    font-size: 14px;
+  }
+}
+
+/* موبايل */
+@media (max-width: 768px) {
+  .NavItems {
+    font-size: 12px;
+  }
+}
+
+/* ===================== Our Brands Dropdown ===================== */
+
+/* إخفاء outline الافتراضي القبيح */
+.brandsDropdown :global(.dropdown-toggle),
+.brandsDropdown :global(.dropdown-toggle:focus),
+.brandsDropdown :global(.dropdown-toggle:active) {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* هوفر عالكلمة نفسها + السهم مع بعض */
+.brandsDropdown :global(.dropdown-toggle:hover) {
+  color: #f7971d;
+  transform: translateY(-2.5px);
+  text-shadow: 3px 3px 20px #f7971d;
+}
+
+/* السهم: ظاهر دايمًا، وبينقلب لما القائمة تفتح */
+.brandsDropdown :global(.dropdown-toggle::after) {
+  opacity: 1;
+  transition: transform 0.25s ease;
+  margin-inline-start: 6px;
+  vertical-align: middle;
+  color: #f7971d;
+}
+
+.brandsDropdown :global(.dropdown-toggle[aria-expanded="true"]::after) {
+  transform: rotate(180deg);
+}
+
+/* شكل القائمة نفسها */
+.brandsDropdown :global(.dropdown-menu) {
+  border-radius: 12px;
+  padding: 6px;
+  margin-top: 8px;
+  min-width: 160px;
+}
+
+[data-bs-theme="dark"] .brandsDropdown :global(.dropdown-menu) {
+  background: #1f303c;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+[data-bs-theme="light"] .brandsDropdown :global(.dropdown-menu) {
+  background: #ffffff;
+  border: 1px solid rgba(22, 35, 44, 0.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* كل عنصر بالقائمة */
+.brandsDropdown :global(.dropdown-item) {
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  transition: background 0.2s ease;
+  text-shadow: none !important;
+  transform: none !important;
+}
+
+.brandsDropdown :global(.dropdown-item:hover) {
+  text-shadow: none !important;
+  transform: none !important;
+}
+
+[data-bs-theme="dark"] .brandsDropdown :global(.dropdown-item) {
+  color: #ffffff;
+}
+
+[data-bs-theme="light"] .brandsDropdown :global(.dropdown-item) {
+  color: #16232c;
+}
+
+[data-bs-theme="dark"] .brandsDropdown :global(.dropdown-item:hover) {
+  background: rgba(247, 151, 29, 0.15);
+}
+
+[data-bs-theme="light"] .brandsDropdown :global(.dropdown-item:hover) {
+  background: rgba(247, 151, 29, 0.1);
+}
+.NavItems:global(.active) {
+  color: var(--orangeColor) !important;
+}
+
+.brandsDropdown :global(.nav-link.active) {
+  color: var(--orangeColor) !important;
+}

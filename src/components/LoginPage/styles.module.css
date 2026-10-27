@@ -1,0 +1,122 @@
+.page {
+  --navy: #070d24;
+  --accent: var(--brand-color, #f7a53f);
+
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: var(--navy);
+}
+
+/* ---------- اليسار ---------- */
+.visual {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  overflow: hidden;
+  background: var(--navy);
+}
+
+.stars {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.earth {
+  position: relative;
+  z-index: 1;
+  width: min(72%, 460px);
+  height: auto;
+  filter: drop-shadow(0 0 60px rgba(90, 169, 255, 0.28));
+}
+
+.tagline {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: #e8ecfa;
+}
+
+.taglineTitle {
+  margin: 0 0 0.35rem;
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  font-weight: 700;
+}
+
+.taglineText {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #aebbe0;
+}
+
+/* ---------- اليمين: لوحة الفورم ---------- */
+.panel {
+  /* الفورم بيرث الألوان هاي، غيريها وبتتغير كلها */
+  --panel-bg: #ffffff;
+  --panel-heading: #0d1838;
+  --panel-text: #1f2430;
+  --panel-muted: #6b7280;
+  --panel-border: #d9dde6;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 1.5rem;
+  background: var(--panel-bg);
+  color: var(--panel-text);
+}
+
+/* ---------- موبايل وتابلت ---------- */
+@media (max-width: 860px) {
+  .page {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
+
+  .visual {
+    min-height: 38dvh;
+    padding: 1.5rem 1rem 3rem;
+    gap: 1rem;
+  }
+
+  .earth {
+    width: min(48vw, 210px);
+  }
+
+  .taglineTitle {
+    font-size: 1.05rem;
+  }
+
+  .taglineText {
+    font-size: 0.85rem;
+  }
+
+  /* اللوحة بتطلع فوق الصورة، والموجة بتنرسم بالـ ::before */
+  .panel {
+    position: relative;
+    z-index: 2;
+    align-items: flex-start;
+    margin-top: -1px;
+    padding: 1.5rem 1.5rem 2.5rem;
+  }
+
+  .panel::before {
+    content: "";
+    position: absolute;
+    inset-inline: 0;
+    top: -39px;
+    height: 40px;
+    background: var(--panel-bg);
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 40' preserveAspectRatio='none'%3E%3Cpath d='M0 40V22C240 -4 480 -4 720 16s480 24 720-6v30Z'/%3E%3C/svg%3E")
+      center / 100% 100% no-repeat;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 40' preserveAspectRatio='none'%3E%3Cpath d='M0 40V22C240 -4 480 -4 720 16s480 24 720-6v30Z'/%3E%3C/svg%3E")
+      center / 100% 100% no-repeat;
+  }
+}

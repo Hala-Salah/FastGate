@@ -1,0 +1,177 @@
+.wrapper {
+  --orange: #f7a53f;
+
+  width: 100%;
+  max-width: 380px;
+}
+
+.title {
+  margin: 0;
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  font-weight: 700;
+  color: var(--panel-heading, #0d1838);
+}
+
+.subtitle {
+  margin: 0.3rem 0 2rem;
+  font-size: 0.9rem;
+  color: var(--panel-muted, #6b7280);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+/* ---------- الحقول (اللابل فوق الحقل) ---------- */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.field label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--panel-text, #1f2430);
+}
+
+.field input {
+  width: 100%;
+  height: 48px;
+  padding: 0 1rem;
+  border: 1px solid var(--panel-border, #d9dde6);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--panel-text, #1f2430);
+  font-size: 0.95rem;
+}
+
+.field input::placeholder {
+  color: #a3a9b8;
+}
+
+.field input:focus-visible {
+  outline: none;
+  border-color: var(--orange);
+  box-shadow: 0 0 0 3px rgba(247, 165, 63, 0.25);
+}
+
+.passwordRow {
+  position: relative;
+}
+
+.passwordRow input {
+  padding-inline-end: 3.2rem;
+}
+
+.toggle {
+  position: absolute;
+  inset-inline-end: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem;
+  border: 0;
+  border-radius: 6px;
+  background: white;
+  color: var(--panel-muted, #6b7280);
+  cursor: pointer;
+}
+
+.toggle:hover {
+  color: var(--orange);
+}
+
+/* ---------- Remember + Forgot ---------- */
+.options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.remember {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--panel-muted, #6b7280);
+  cursor: pointer;
+}
+
+.remember input {
+  accent-color: var(--orange);
+}
+
+.link {
+  color: #f7971d; /* برتقالي أغمق عشان يبين عالأبيض */
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.link:hover {
+  color: #f7971d;
+  transform: translateY(-2.5px);
+  text-shadow: 3px 3px 20px #f7971d;
+  .toggle:focus-visible,
+  .submit:focus-visible,
+  .link:focus-visible {
+    outline: 2px solid var(--orange);
+    outline-offset: 2px;
+  }
+}
+
+.toggle:focus-visible,
+.submit:focus-visible,
+.link:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 2px;
+}
+
+/* ---------- خطأ + زر الدخول ---------- */
+.error {
+  margin: 0;
+  padding: 0.6rem 0.8rem;
+  border-radius: 8px;
+  background: #fdecec;
+  border: 1px solid #f5b5b5;
+  color: #a12626;
+  font-size: 0.88rem;
+}
+
+.submit {
+  height: 48px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--orange);
+  color: #0d1838;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.submit:hover:not(:disabled) {
+  filter: brightness(1.05);
+}
+
+.submit:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+.footer {
+  margin: 2rem 0 0;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.footer:hover {
+  color: #f7971d;
+  transform: translateY(-2.5px);
+  text-shadow: 3px 3px 20px #f7971d;
+}

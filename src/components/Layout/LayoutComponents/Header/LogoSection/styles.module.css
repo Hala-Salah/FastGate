@@ -1,0 +1,12 @@
+.fastgateLogo {
+  width: 70px;
+  transition: transform 0.3s ease;
+}
+.fastgateLogo:hover {
+  transform: scale(0.92);
+}
+@media (max-width: 576px) {
+  .fastgateLogo {
+    width: 60px;
+  }
+}

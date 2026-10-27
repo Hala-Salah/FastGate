@@ -1,0 +1,6 @@
+/* بملف RightSection.module.css أو أياً كان */
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* أو 12px، جربي القيمة يلي تريحك */
+}

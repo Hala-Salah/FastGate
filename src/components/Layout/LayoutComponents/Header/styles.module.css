@@ -1,0 +1,204 @@
+/* ========================= */
+/* Navbar */
+/* ========================= */
+.navWrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+.MainNavBar {
+  background: var(--my-navbar-bg);
+  color: var(--my-text-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+  .NavBar {
+    height: 60px;
+  }
+}
+
+/* Tablet + Mobile */
+@media (max-width: 992px) {
+  .MainNavBar {
+    padding: 8px 12px;
+  }
+}
+
+/* ========================= */
+/* Toggle Button */
+/* ========================= */
+
+.customToggler {
+  width: 48px;
+  height: 48px;
+
+  border: none;
+  outline: none;
+  box-shadow: none;
+
+  background: #fff;
+  border-radius: 12px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 5px;
+  padding: 0;
+
+  transition: 0.3s ease;
+}
+
+.customToggler:focus {
+  box-shadow: none;
+}
+
+/* إزالة أيقونة Bootstrap */
+.customToggler::after {
+  display: none;
+}
+
+/* ========================= */
+/* Hamburger Lines */
+/* ========================= */
+
+.customToggler span {
+  display: block;
+  height: 3px;
+  border-radius: 999px;
+  background: #16232c;
+  transition: all 0.35s ease;
+}
+
+/* الشكل العادي */
+
+.customToggler span:nth-child(1) {
+  width: 14px;
+  margin-right: 14px;
+}
+
+.customToggler span:nth-child(2) {
+  width: 20px;
+  margin-right: 6px;
+}
+
+.customToggler span:nth-child(3) {
+  width: 28px;
+}
+
+/* ========================= */
+/* Open State (X) */
+/* ========================= */
+
+.line1Open {
+  width: 28px !important;
+  margin-right: 0 !important;
+
+  transform: translateY(8px) rotate(45deg);
+}
+
+.line2Open {
+  opacity: 0;
+}
+
+.line3Open {
+  width: 28px !important;
+
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ========================= */
+/* Tablet Responsive */
+/* ========================= */
+
+@media (max-width: 768px) {
+  .customToggler {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+  }
+
+  .customToggler span {
+    height: 2.5px;
+  }
+
+  .customToggler span:nth-child(1) {
+    width: 12px;
+    margin-right: 10px;
+  }
+
+  .customToggler span:nth-child(2) {
+    width: 17px;
+    margin-right: 5px;
+  }
+
+  .customToggler span:nth-child(3) {
+    width: 24px;
+  }
+
+  .line1Open {
+    width: 24px !important;
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .line3Open {
+    width: 24px !important;
+    transform: translateY(-7px) rotate(-45deg);
+  }
+}
+
+/* ========================= */
+/* Small Mobile */
+/* ========================= */
+
+@media (max-width: 480px) {
+  .MainNavBar {
+    padding: 6px 10px;
+  }
+
+  .customToggler {
+    width: 36px;
+    height: 36px;
+    border-radius: 9px;
+
+    gap: 4px;
+  }
+
+  .customToggler span {
+    height: 2px;
+  }
+
+  .customToggler span:nth-child(1) {
+    width: 10px;
+    margin-right: 8px;
+  }
+
+  .customToggler span:nth-child(2) {
+    width: 14px;
+    margin-right: 4px;
+  }
+
+  .customToggler span:nth-child(3) {
+    width: 20px;
+  }
+
+  .line1Open {
+    width: 20px !important;
+    transform: translateY(6px) rotate(45deg);
+  }
+
+  .line3Open {
+    width: 20px !important;
+    transform: translateY(-6px) rotate(-45deg);
+  }
+}

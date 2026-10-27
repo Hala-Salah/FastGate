@@ -1,0 +1,63 @@
+.aboutLabel {
+  color: var(--orangeColor);
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+}
+
+.aboutTitle {
+  margin: 8px 0 20px;
+  font-size: 2.5rem;
+}
+
+.aboutTitleAccent {
+  color: var(--orangeColor);
+}
+
+.aboutText {
+  margin: 0 0 16px;
+  opacity: 0.8;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.aboutCta {
+  cursor: pointer;
+  border: 1px solid var(--orangeColor);
+  background: var(--orangeColor);
+  color: white;
+  padding: 10px 24px;
+  border-radius: 8px;
+}
+
+/* =========================
+   TABLET
+   601px - 1024px
+========================= */
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .aboutTitle {
+    font-size: 2rem;
+  }
+
+  .aboutText {
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+}
+
+/* =========================
+   MOBILE
+   600px and below
+========================= */
+
+@media (max-width: 600px) {
+  .aboutTitle {
+    margin-bottom: 14px;
+    font-size: clamp(1.8rem, 9vw, 2.4rem);
+  }
+
+  .aboutText {
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+}

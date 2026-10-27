@@ -1,0 +1,42 @@
+.body {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: 2rem;
+  padding: 2rem 2rem;
+}
+
+.filtersToggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .body {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+    padding: 2rem 2rem;
+  }
+
+  .filtersToggle {
+    display: block;
+    width: 100%;
+    padding: 0.7rem 1rem;
+    border: 1px solid rgba(22, 35, 44, 0.2);
+    border-radius: 999px;
+    background: transparent;
+    color: inherit;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .filters {
+    display: none;
+  }
+
+  .filtersOpen {
+    display: block;
+  }
+}
+
+[data-bs-theme="dark"] .filtersToggle {
+  border-color: rgba(255, 255, 255, 0.25);
+}

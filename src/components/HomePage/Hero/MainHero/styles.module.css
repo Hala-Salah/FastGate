@@ -1,0 +1,48 @@
+.heroTitle {
+  margin: 0 0 12px;
+  font-size: clamp(2rem, 8vw, 4rem);
+  font-weight: 700;
+  letter-spacing: clamp(2px, 0.5vw, 4px);
+}
+
+.heroSubtitle {
+  max-width: 480px;
+  margin: 0 auto 24px;
+  color: var(--orangeColor);
+  font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+  line-height: 1.5;
+}
+
+/* =========================
+   TABLET
+   601px - 1024px
+========================= */
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .heroTitle {
+    font-size: 3.5rem;
+  }
+
+  .heroSubtitle {
+    font-size: 0.95rem;
+  }
+}
+
+/* =========================
+   MOBILE
+   600px and below
+========================= */
+
+@media (max-width: 600px) {
+  .heroTitle {
+    font-size: clamp(2rem, 11vw, 3rem);
+    letter-spacing: 2px;
+  }
+
+  .heroSubtitle {
+    max-width: 300px;
+    margin-inline: auto;
+    margin-bottom: 24px;
+    line-height: 1.5;
+  }
+}

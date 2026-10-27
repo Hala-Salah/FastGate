@@ -1,0 +1,28 @@
+.error {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.4rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  animation: errorIn 0.25s ease-out;
+}
+
+[data-bs-theme="dark"] .error {
+  color: #ff8a8a;
+}
+
+[data-bs-theme="light"] .error {
+  color: #d93025;
+}
+
+@keyframes errorIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
